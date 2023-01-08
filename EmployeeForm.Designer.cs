@@ -49,7 +49,28 @@ namespace PayrollApplication
             this.grpMartialStatus = new System.Windows.Forms.GroupBox();
             this.lblUnionMember = new System.Windows.Forms.Label();
             this.chkUnionMember = new System.Windows.Forms.CheckBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.txtPostCode = new System.Windows.Forms.TextBox();
+            this.lblPostCode = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblPhoneNo = new System.Windows.Forms.Label();
+            this.lblCountry = new System.Windows.Forms.Label();
+            this.txtEmailAddress = new System.Windows.Forms.TextBox();
+            this.lblEmailAddress = new System.Windows.Forms.Label();
+            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.lblNotes = new System.Windows.Forms.Label();
+            this.cmbCountries = new System.Windows.Forms.ComboBox();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnUpdateEmployee = new System.Windows.Forms.Button();
+            this.btnDeleteEmployee = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnPreview = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.grpEmployeeInformation.SuspendLayout();
+            this.grpEmployeeContactDetails.SuspendLayout();
             this.grpGender.SuspendLayout();
             this.grpMartialStatus.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +91,7 @@ namespace PayrollApplication
             this.grpEmployeeInformation.Controls.Add(this.lblLastName);
             this.grpEmployeeInformation.Controls.Add(this.txtEmployeeID);
             this.grpEmployeeInformation.Controls.Add(this.lblEmployeeID);
-            this.grpEmployeeInformation.Location = new System.Drawing.Point(30, 31);
+            this.grpEmployeeInformation.Location = new System.Drawing.Point(30, 32);
             this.grpEmployeeInformation.Name = "grpEmployeeInformation";
             this.grpEmployeeInformation.Size = new System.Drawing.Size(447, 571);
             this.grpEmployeeInformation.TabIndex = 0;
@@ -79,7 +100,21 @@ namespace PayrollApplication
             // 
             // grpEmployeeContactDetails
             // 
-            this.grpEmployeeContactDetails.Location = new System.Drawing.Point(527, 31);
+            this.grpEmployeeContactDetails.Controls.Add(this.cmbCountries);
+            this.grpEmployeeContactDetails.Controls.Add(this.txtNotes);
+            this.grpEmployeeContactDetails.Controls.Add(this.lblNotes);
+            this.grpEmployeeContactDetails.Controls.Add(this.txtPhoneNumber);
+            this.grpEmployeeContactDetails.Controls.Add(this.lblPhoneNo);
+            this.grpEmployeeContactDetails.Controls.Add(this.lblCountry);
+            this.grpEmployeeContactDetails.Controls.Add(this.txtEmailAddress);
+            this.grpEmployeeContactDetails.Controls.Add(this.lblEmailAddress);
+            this.grpEmployeeContactDetails.Controls.Add(this.txtCity);
+            this.grpEmployeeContactDetails.Controls.Add(this.txtAddress);
+            this.grpEmployeeContactDetails.Controls.Add(this.lblCity);
+            this.grpEmployeeContactDetails.Controls.Add(this.lblAddress);
+            this.grpEmployeeContactDetails.Controls.Add(this.txtPostCode);
+            this.grpEmployeeContactDetails.Controls.Add(this.lblPostCode);
+            this.grpEmployeeContactDetails.Location = new System.Drawing.Point(527, 32);
             this.grpEmployeeContactDetails.Name = "grpEmployeeContactDetails";
             this.grpEmployeeContactDetails.Size = new System.Drawing.Size(447, 571);
             this.grpEmployeeContactDetails.TabIndex = 1;
@@ -251,12 +286,384 @@ namespace PayrollApplication
             this.chkUnionMember.TabIndex = 12;
             this.chkUnionMember.UseVisualStyleBackColor = true;
             // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(214, 87);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(187, 26);
+            this.txtCity.TabIndex = 18;
+            // 
+            // lblCity
+            // 
+            this.lblCity.AutoSize = true;
+            this.lblCity.Location = new System.Drawing.Point(26, 90);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(43, 20);
+            this.lblCity.TabIndex = 17;
+            this.lblCity.Text = "City :";
+            // 
+            // txtPostCode
+            // 
+            this.txtPostCode.Location = new System.Drawing.Point(214, 136);
+            this.txtPostCode.Name = "txtPostCode";
+            this.txtPostCode.Size = new System.Drawing.Size(187, 26);
+            this.txtPostCode.TabIndex = 16;
+            // 
+            // lblPostCode
+            // 
+            this.lblPostCode.AutoSize = true;
+            this.lblPostCode.Location = new System.Drawing.Point(26, 139);
+            this.lblPostCode.Name = "lblPostCode";
+            this.lblPostCode.Size = new System.Drawing.Size(91, 20);
+            this.lblPostCode.TabIndex = 15;
+            this.lblPostCode.Text = "Post Code :";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(214, 44);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(187, 26);
+            this.txtAddress.TabIndex = 14;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(26, 47);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(76, 20);
+            this.lblAddress.TabIndex = 13;
+            this.lblAddress.Text = "Address :";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Location = new System.Drawing.Point(214, 239);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(187, 26);
+            this.txtPhoneNumber.TabIndex = 24;
+            // 
+            // lblPhoneNo
+            // 
+            this.lblPhoneNo.AutoSize = true;
+            this.lblPhoneNo.Location = new System.Drawing.Point(26, 242);
+            this.lblPhoneNo.Name = "lblPhoneNo";
+            this.lblPhoneNo.Size = new System.Drawing.Size(123, 20);
+            this.lblPhoneNo.TabIndex = 23;
+            this.lblPhoneNo.Text = "Phone Number :";
+            // 
+            // lblCountry
+            // 
+            this.lblCountry.AutoSize = true;
+            this.lblCountry.Location = new System.Drawing.Point(26, 199);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(72, 20);
+            this.lblCountry.TabIndex = 19;
+            this.lblCountry.Text = "Country :";
+            // 
+            // txtEmailAddress
+            // 
+            this.txtEmailAddress.Location = new System.Drawing.Point(214, 288);
+            this.txtEmailAddress.Name = "txtEmailAddress";
+            this.txtEmailAddress.Size = new System.Drawing.Size(187, 26);
+            this.txtEmailAddress.TabIndex = 22;
+            // 
+            // lblEmailAddress
+            // 
+            this.lblEmailAddress.AutoSize = true;
+            this.lblEmailAddress.Location = new System.Drawing.Point(26, 291);
+            this.lblEmailAddress.Name = "lblEmailAddress";
+            this.lblEmailAddress.Size = new System.Drawing.Size(119, 20);
+            this.lblEmailAddress.TabIndex = 21;
+            this.lblEmailAddress.Text = "Email Address :";
+            // 
+            // txtNotes
+            // 
+            this.txtNotes.Location = new System.Drawing.Point(214, 341);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(187, 121);
+            this.txtNotes.TabIndex = 26;
+            // 
+            // lblNotes
+            // 
+            this.lblNotes.AutoSize = true;
+            this.lblNotes.Location = new System.Drawing.Point(26, 344);
+            this.lblNotes.Name = "lblNotes";
+            this.lblNotes.Size = new System.Drawing.Size(63, 20);
+            this.lblNotes.TabIndex = 25;
+            this.lblNotes.Text = "Notes : ";
+            // 
+            // cmbCountries
+            // 
+            this.cmbCountries.FormattingEnabled = true;
+            this.cmbCountries.Items.AddRange(new object[] {
+            "Select a Country ....",
+            "Afghanistan",
+            "Albania",
+            "Algeria",
+            "Andorra",
+            "Angola",
+            "Antigua & Deps",
+            "Argentina",
+            "Armenia",
+            "Australia",
+            "Austria",
+            "Azerbaijan",
+            "Bahamas",
+            "Bahrain",
+            "Bangladesh",
+            "Barbados",
+            "Belarus",
+            "Belgium",
+            "Belize",
+            "Benin",
+            "Bhutan",
+            "Bolivia",
+            "Bosnia Herzegovina",
+            "Botswana",
+            "Brazil",
+            "Brunei",
+            "Bulgaria",
+            "Burkina",
+            "Burundi",
+            "Cambodia",
+            "Cameroon",
+            "Canada",
+            "Cape Verde",
+            "Central African Rep",
+            "Chad",
+            "Chile",
+            "China",
+            "Colombia",
+            "Comoros",
+            "Congo",
+            "Congo {Democratic Rep}",
+            "Costa Rica",
+            "Croatia",
+            "Cuba",
+            "Cyprus",
+            "Czech Republic",
+            "Denmark",
+            "Djibouti",
+            "Dominica",
+            "Dominican Republic",
+            "East Timor",
+            "Ecuador",
+            "Egypt",
+            "El Salvador",
+            "Equatorial Guinea",
+            "Eritrea",
+            "Estonia",
+            "Ethiopia",
+            "Fiji",
+            "Finland",
+            "France",
+            "Gabon",
+            "Gambia",
+            "Georgia",
+            "Germany",
+            "Ghana",
+            "Greece",
+            "Grenada",
+            "Guatemala",
+            "Guinea",
+            "Guinea-Bissau",
+            "Guyana",
+            "Haiti",
+            "Honduras",
+            "Hungary",
+            "Iceland",
+            "India",
+            "Indonesia",
+            "Iran",
+            "Iraq",
+            "Ireland {Republic}",
+            "Israel",
+            "Italy",
+            "Ivory Coast",
+            "Jamaica",
+            "Japan",
+            "Jordan",
+            "Kazakhstan",
+            "Kenya",
+            "Kiribati",
+            "Korea North",
+            "Korea South",
+            "Kosovo",
+            "Kuwait",
+            "Kyrgyzstan",
+            "Laos",
+            "Latvia",
+            "Lebanon",
+            "Lesotho",
+            "Liberia",
+            "Libya",
+            "Liechtenstein",
+            "Lithuania",
+            "Luxembourg",
+            "Macedonia",
+            "Madagascar",
+            "Malawi",
+            "Malaysia",
+            "Maldives",
+            "Mali",
+            "Malta",
+            "Marshall Islands",
+            "Mauritania",
+            "Mauritius",
+            "Mexico",
+            "Micronesia",
+            "Moldova",
+            "Monaco",
+            "Mongolia",
+            "Montenegro",
+            "Morocco",
+            "Mozambique",
+            "Myanmar, {Burma}",
+            "Namibia",
+            "Nauru",
+            "Nepal",
+            "Netherlands",
+            "New Zealand",
+            "Nicaragua",
+            "Niger",
+            "Nigeria",
+            "Norway",
+            "Oman",
+            "Pakistan",
+            "Palau",
+            "Panama",
+            "Papua New Guinea",
+            "Paraguay",
+            "Peru",
+            "Philippines",
+            "Poland",
+            "Portugal",
+            "Qatar",
+            "Romania",
+            "Russian Federation",
+            "Rwanda",
+            "St Kitts & Nevis",
+            "St Lucia",
+            "Saint Vincent & the Grenadines",
+            "Samoa",
+            "San Marino",
+            "Sao Tome & Principe",
+            "Saudi Arabia",
+            "Senegal",
+            "Serbia",
+            "Seychelles",
+            "Sierra Leone",
+            "Singapore",
+            "Slovakia",
+            "Slovenia",
+            "Solomon Islands",
+            "Somalia",
+            "South Africa",
+            "South Sudan",
+            "Spain",
+            "Sri Lanka",
+            "Sudan",
+            "Suriname",
+            "Swaziland",
+            "Sweden",
+            "Switzerland",
+            "Syria",
+            "Taiwan",
+            "Tajikistan",
+            "Tanzania",
+            "Thailand",
+            "Togo",
+            "Tonga",
+            "Trinidad & Tobago",
+            "Tunisia",
+            "Turkey",
+            "Turkmenistan",
+            "Tuvalu",
+            "Uganda",
+            "Ukraine",
+            "United Arab Emirates",
+            "United Kingdom",
+            "United States",
+            "Uruguay",
+            "Uzbekistan",
+            "Vanuatu",
+            "Vatican City",
+            "Venezuela",
+            "Vietnam",
+            "Yemen",
+            "Zambia",
+            "Zimbabwe"});
+            this.cmbCountries.Location = new System.Drawing.Point(214, 190);
+            this.cmbCountries.Name = "cmbCountries";
+            this.cmbCountries.Size = new System.Drawing.Size(187, 28);
+            this.cmbCountries.TabIndex = 27;
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.Location = new System.Drawing.Point(30, 627);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(157, 43);
+            this.btnAddEmployee.TabIndex = 2;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateEmployee
+            // 
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(208, 627);
+            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(151, 43);
+            this.btnUpdateEmployee.TabIndex = 3;
+            this.btnUpdateEmployee.Text = "Update Employee";
+            this.btnUpdateEmployee.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(380, 627);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(149, 43);
+            this.btnDeleteEmployee.TabIndex = 4;
+            this.btnDeleteEmployee.Text = "Delete Employee";
+            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(581, 627);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(114, 43);
+            this.btnReset.TabIndex = 5;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.Location = new System.Drawing.Point(723, 627);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(114, 43);
+            this.btnPreview.TabIndex = 6;
+            this.btnPreview.Text = "Preview";
+            this.btnPreview.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(860, 627);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(114, 43);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(998, 710);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnPreview);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnDeleteEmployee);
+            this.Controls.Add(this.btnUpdateEmployee);
+            this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.grpEmployeeContactDetails);
             this.Controls.Add(this.grpEmployeeInformation);
             this.Name = "EmployeeForm";
@@ -264,6 +671,8 @@ namespace PayrollApplication
             this.Text = "Manage Employee";
             this.grpEmployeeInformation.ResumeLayout(false);
             this.grpEmployeeInformation.PerformLayout();
+            this.grpEmployeeContactDetails.ResumeLayout(false);
+            this.grpEmployeeContactDetails.PerformLayout();
             this.grpGender.ResumeLayout(false);
             this.grpGender.PerformLayout();
             this.grpMartialStatus.ResumeLayout(false);
@@ -294,6 +703,26 @@ namespace PayrollApplication
         private System.Windows.Forms.TextBox txtEmployeeID;
         private System.Windows.Forms.Label lblEmployeeID;
         private System.Windows.Forms.GroupBox grpEmployeeContactDetails;
+        private System.Windows.Forms.ComboBox cmbCountries;
+        private System.Windows.Forms.TextBox txtNotes;
+        private System.Windows.Forms.Label lblNotes;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.Label lblPhoneNo;
+        private System.Windows.Forms.Label lblCountry;
+        private System.Windows.Forms.TextBox txtEmailAddress;
+        private System.Windows.Forms.Label lblEmailAddress;
+        private System.Windows.Forms.TextBox txtCity;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lblCity;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.TextBox txtPostCode;
+        private System.Windows.Forms.Label lblPostCode;
+        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Button btnUpdateEmployee;
+        private System.Windows.Forms.Button btnDeleteEmployee;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnPreview;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
